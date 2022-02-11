@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>stripe | example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta content="stripe" property="og:title">
+      <meta content="example" property="og:description">
+      <link rel="stylesheet" href="assets/a.css">
+      <link rel="stylesheet" href="https://use.typekit.net/obf6rgz.css">
+   </head>
+   <body align='center'>
+      <div class="card">
+         <h4>pay</h4>
+         <form>
+            <script src="https://js.stripe.com/v3/"></script>
+         <form action="/charge" method="post" id="payment-form">
+            <div class="form-row">
+               <fieldset>
+               <div class="input-container">
+                  <input type ="text" id = 'Name' name="cardholder-name" placeholder="Jane Doe" required>
+                  <div class="bar"></div>
+               </div>
+               <label for="card-element">
+               </label>
+               <div id="card-element">
+                  <!-- A Stripe Element will be inserted here. -->
+               </div>
+               <!-- Used to display Element errors. -->
+               <div id="card-errors" role="alert"></div>
+            </div>
+            <div class="button-container">
+               <button>Submit Payment</button>
+            </div>
+            <div class="outcome">
+               <div class="error" role="alert"></div>
+               <div class="success">
+                  <span class="token"></span>
+               </div>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
